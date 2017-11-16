@@ -38,6 +38,7 @@ cookieArray: function() {
 pike.cookieArray();
 pike.cookieList();
 
+
 var airport= {
   name:'SeaTac Airport',
   minCustomers: 3,
