@@ -12,7 +12,7 @@ var pike= {
   },
 cookiesPerHour: function() {
   var cookies= this.avgCookieSales*this.randomCustomersPerHour(this.minCustomers,this.maxCustomers);
-  return cookies;
+  return Math.floor (cookies);
   },
 cookieArray: function() {
   var cookieArray= [];
@@ -22,9 +22,21 @@ cookieArray: function() {
     cookieArray.push(numberofCookies);
   }
    this.cookieSales= cookieArray;
+},
+ cookieList: function() {
+   var htmlList=document.getElementById(this.name);
+   console.log(this.name);
+   for (var  i=0; i<this.hours.length; i++) {
+     var list= this.hours[i] + ': ' + this.cookieSales[i] + ' cookies';
+     console.log(list);
+     var listElement= document.createElement('li');
+     listElement.textContent= list;
+     htmlList.appendChild(listElement);
+   }
+ }
 }
-
-}
+pike.cookieArray();
+pike.cookieList();
 
 var airport= {
   name:'SeaTac Airport',
@@ -38,7 +50,7 @@ var airport= {
   },
 cookiesPerHour: function() {
   var cookies= this.avgCookieSales*this.randomCustomersPerHour(this.minCustomers,this.maxCustomers);
-  return cookies;
+  return Math.floor (cookies);
   },
 cookieArray: function() {
   var cookieArray= [];
@@ -48,8 +60,22 @@ cookieArray: function() {
     cookieArray.push(numberofCookies);
   }
    this.cookieSales= cookieArray;
+ },
+cookieList: function() {
+  var htmlList=document.getElementById(this.name);
+  console.log(this.name);
+  for (var  i=0; i<this.hours.length; i++) {
+    var list= this.hours[i] + ': ' + this.cookieSales[i] + ' cookies';
+    console.log(list);
+    var listElement= document.createElement('li');
+    listElement.textContent= list;
+    htmlList.appendChild(listElement);
+  }
 }
 }
+airport.cookieArray();
+airport.cookieList();
+
 
 var center= {
   name:'Seattle Center',
@@ -63,7 +89,7 @@ var center= {
   },
 cookiesPerHour: function() {
   var cookies= this.avgCookieSales*this.randomCustomersPerHour(this.minCustomers,this.maxCustomers);
-  return cookies;
+  return Math.floor (cookies);
   },
 cookieArray: function() {
   var cookieArray= [];
@@ -73,8 +99,22 @@ cookieArray: function() {
     cookieArray.push(numberofCookies);
   }
    this.cookieSales= cookieArray;
+},
+cookieList: function() {
+  var htmlList=document.getElementById(this.name);
+  console.log(this.name);
+  for (var  i=0; i<this.hours.length; i++) {
+    var list= this.hours[i] + ': ' + this.cookieSales[i] + ' cookies';
+    console.log(list);
+    var listElement= document.createElement('li');
+    listElement.textContent= list;
+    htmlList.appendChild(listElement);
+  }
 }
 }
+center.cookieArray();
+center.cookieList();
+
 
 var hill= {
   name:'Capitol Hill',
@@ -88,7 +128,7 @@ var hill= {
   },
 cookiesPerHour: function() {
   var cookies= this.avgCookieSales*this.randomCustomersPerHour(this.minCustomers,this.maxCustomers);
-  return cookies;
+  return Math.floor (cookies);
   },
 cookieArray: function() {
   var cookieArray= [];
@@ -98,14 +138,28 @@ cookieArray: function() {
     cookieArray.push(numberofCookies);
   }
    this.cookieSales= cookieArray;
+},
+cookieList: function() {
+  var htmlList=document.getElementById(this.name);
+  console.log(this.name);
+  for (var  i=0; i<this.hours.length; i++) {
+    var list= this.hours[i] + ': ' + this.cookieSales[i] + ' cookies';
+    console.log(list);
+    var listElement= document.createElement('li');
+    listElement.textContent= list;
+    htmlList.appendChild(listElement);
+  }
 }
 }
+hill.cookieArray();
+hill.cookieList();
+
 
 var alki= {
-  name:'SeaTac Airport',
+  name:'Alki',
   minCustomers: 2,
-  maxXustomers: 16,
-  avgXookieSales: 4.6,
+  maxCustomers: 16,
+  avgCookieSales: 4.6,
   hours:['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm'],
   randomCustomersPerHour: function(min,max) {
     var randomNumber= Math.random()*(max-min)+min;
@@ -113,7 +167,7 @@ var alki= {
   },
 cookiesPerHour: function() {
   var cookies= this.avgCookieSales*this.randomCustomersPerHour(this.minCustomers,this.maxCustomers);
-  return cookies;
+  return Math.floor (cookies);
   },
 cookieArray: function() {
   var cookieArray= [];
@@ -123,5 +177,18 @@ cookieArray: function() {
     cookieArray.push(numberofCookies);
   }
    this.cookieSales= cookieArray;
+},
+cookieList: function() {
+  var htmlList=document.getElementById(this.name);
+  console.log(this.name);
+  for (var  i=0; i<this.hours.length; i++) {
+    var list= this.hours[i] + ': ' + this.cookieSales[i] + ' cookies';
+    console.log(list);
+    var listElement= document.createElement('li');
+    listElement.textContent= list;
+    htmlList.appendChild(listElement);
+  }
 }
 }
+alki.cookieArray();
+alki.cookieList();
